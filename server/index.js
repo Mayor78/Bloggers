@@ -5,6 +5,9 @@ const cors = require('cors');
 const { connect } = require('mongoose');
 require('dotenv').config();
 const upload = require('express-fileupload');
+const mongoUri = process.env.MONGO_URI;
+const jwtSecret = process.env.JWT_SECRET;
+
 
 const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
